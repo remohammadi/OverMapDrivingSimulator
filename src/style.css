@@ -1,10 +1,71 @@
-/* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
 #map {
   height: 100%;
 }
 
-/* Optional: Makes the sample page fill the window. */
+code {
+  font-size: 115%;
+  color: #ffcccc;
+}
+
+#chevron, #hint, #jump, #keys {
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  position: fixed;
+  z-index: 10;
+}
+#chevron {
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  padding: 5px 2px;
+}
+#hint {
+  text-align: center;
+  width: 250px;
+  top: 10px;
+  left: 10px;
+  padding: 5px;
+}
+#jump {
+  width: 250px;
+  top: 80px;
+  left: 10px;
+  padding: 5px;
+}
+#jump .form {
+  display: flex;
+  flex-flow: row wrap;
+}
+#jump .loc {
+  padding: 2px 5px;
+  border-radius: 4px;
+  background-color: #2e3436;
+  margin: 5px;
+  line-height: 180%;
+  cursor: pointer;
+}
+#keys {
+  width: 20rem;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+}
+#keys table {
+  width: 100%;
+}
+.key code {
+  line-height: 180%;
+  background-color: #2e3436;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+.close {
+  float: right;
+  padding: 2px 5px;
+  cursor: pointer;
+}
+
 html,
 body {
   height: 100%;

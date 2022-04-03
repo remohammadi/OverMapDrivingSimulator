@@ -1,17 +1,66 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>45° Imagery</title>
+    <title>Driving Simulator</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script src="./index.js"></script>
   </head>
   <body>
     <div id="map"></div>
+    <div id="chevron">🔺</div>
+    <div id="hint"></div>
+    <div id="jump">
+    </div>
+    <div id="keys">
+      Keys <span class='close' onclick='this.parentNode.style.display = "none"; return false;'>X</span>
+      <table>
+        <tr>
+          <td class="action">Increase speed (linearly)</td>
+          <td class="key"><code>W</code></td>
+        </tr>
+        <tr>
+          <td class="action">Decrease speed (linearly)</td>
+          <td class="key"><code>S</code></td>
+        </tr>
+        <tr>
+          <td class="action">Turn left (1°)</td>
+          <td class="key"><code>A</code></td>
+        </tr>
+        <tr>
+          <td class="action">Turn right (1°)</td>
+          <td class="key"><code>D</code></td>
+        </tr>
+        <tr>
+          <td class="action">Turn left (5°)</td>
+          <td class="key"><code>Q</code></td>
+        </tr>
+        <tr>
+          <td class="action">Turn right (5°)</td>
+          <td class="key"><code>E</code></td>
+        </tr>
+        <tr>
+          <td class="action">Increase speed (exponentially)</td>
+          <td class="key"><code>N</code></td>
+        </tr>
+        <tr>
+          <td class="action">Decrease speed (exponentially)</td>
+          <td class="key"><code>Space</code></td>
+        </tr>
+        <tr>
+          <td class="action">Show the jump box</td>
+          <td class="key"><code>J</code></td>
+        </tr>
+        <tr>
+          <td class="action">Show this list</td>
+          <td class="key"><code>?</code></td>
+        </tr>
+      </table>
+    </div>
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script src="./index.js"></script>
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=simMgr.initMap&v=weekly"
       async
     ></script>
   </body>
